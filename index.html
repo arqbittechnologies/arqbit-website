@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ArQbit Technologies Pvt. Ltd. | Coming Soon</title>
+
+  <meta name="description" content="ArQbit Technologies Pvt. Ltd. - Innovating the future through Quantum Computing, Blockchain, Semiconductor, Drone, Robotics, AI/ ML and  Sustainable Engineering.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #00e5ff;
+      --secondary: #7b2cff;
+      --dark: #050816;
+      --light: #ffffff;
+      --muted: #aab4c8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      color: var(--light);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 255, 0.12), transparent 25%),
+        radial-gradient(circle at 85% 75%, rgba(123, 44, 255, 0.15), transparent 30%),
+        linear-gradient(135deg, #030612 0%, #081126 50%, #030612 100%);
+      overflow-x: hidden;
+    }
+
+    /* Animated background grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: -1;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      padding: 25px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+    }
+
+    .logo-text h2 {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--primary);
+      letter-spacing: 2px;
+    }
+
+    .status {
+      padding: 9px 16px;
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      border-radius: 30px;
+      color: var(--primary);
+      font-size: 13px;
+      background: rgba(0, 229, 255, 0.05);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00ff95;
+      border-radius: 50%;
+      margin-right: 7px;
+      box-shadow: 0 0 10px #00ff95;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: calc(100vh - 105px);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 60px 0 80px;
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(123, 44, 255, 0.12);
+      border: 1px solid rgba(123, 44, 255, 0.45);
+      color: #c9a7ff;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 90px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, var(--primary), #a879ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.8;
+    }
+
+    /* Technology Cards */
+    .technologies {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin: 55px auto;
+      max-width: 1100px;
+    }
+
+    .tech-card {
+      padding: 22px 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(10px);
+      transition: 0.3s ease;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 35px rgba(0, 229, 255, 0.12);
+    }
+
+    .tech-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .tech-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #dfe7f5;
+    }
+
+    /* Contact */
+    .contact-section {
+      margin-top: 10px;
+    }
+
+    .contact-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--primary);
+      margin-bottom: 22px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-btn {
+      padding: 14px 22px;
+      text-decoration: none;
+      color: white;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.04);
+      transition: 0.3s ease;
+      font-size: 14px;
+    }
+
+    .contact-btn:hover {
+      border-color: var(--primary);
+      background: rgba(0, 229, 255, 0.1);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.12);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: #748097;
+      font-size: 13px;
+    }
+
+    footer span {
+      color: var(--primary);
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.75);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .technologies {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .technologies {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .contact-btn {
+        width: 100%;
+        max-width: 330px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#" class="logo">
+        <div class="logo-mark">A</div>
+
+        <div class="logo-text">
+          <h2>ArQbit</h2>
+          <span>TECHNOLOGIES PVT. LTD.</span>
+        </div>
+      </a>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        INNOVATION IN PROGRESS
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="hero">
+    <div class="container hero-content">
+
+      <div class="badge">
+        The Future of Computing is Being Engineered
+      </div>
+
+      <h1>
+        <span class="gradient-text">COMING SOON</span>
+      </h1>
+
+      <p>
+        ArQbit Technologies Pvt. Ltd. is building innovative solutions
+        at the intersection of advanced computing, intelligent systems,
+        and next-generation digital technologies.
+      </p>
+
+      <!-- TECHNOLOGY AREAS -->
+      <section class="technologies">
+
+        <div class="tech-card">
+          <div class="tech-icon">⚛️</div>
+          <h3>Quantum Computing</h3>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">⛓️</div>
+          <h3>Blockchain</h3>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🏽</div>
+          <h3>Semiconductor</h3>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">✈︎</div>
+          <h3>Drone Technology</h3>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🤖</div>
+          <h3>Robotics</h3>
+        </div>
+		
+		<div class="tech-card">
+          <div class="tech-icon">🧠</div>
+          <h3>AI/ ML</h3>
+        </div>
+		
+		<div class="tech-card">
+          <div class="tech-icon">🌱</div>
+          <h3>Sustainable Engineering</h3>
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact-section">
+
+        <div class="contact-title">
+          Connect With Us
+        </div>
+
+        <div class="contact-buttons">
+
+          <a href="mailto:arqbitofficial@gmail.com"
+             class="contact-btn">
+            ✉ arqbitofficial@gmail.com
+          </a>
+
+          <a href="tel:+918334052718"
+             class="contact-btn">
+            ☎ +91 8334052718
+          </a>
+
+          <a href="https://www.arqbit.in"
+             class="contact-btn">
+            🌐 www.arqbit.in
+          </a>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>ArQbit Technologies Pvt. Ltd.</span>
+    &nbsp;|&nbsp; Pioneering the Future of Computing.
+  </footer>
+
+</body>
+</html>
